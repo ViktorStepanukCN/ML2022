@@ -1,0 +1,39 @@
+1. Nainstalovat Anacondu - https://www.anaconda.com/
+
+2. Vytvorit environment, napriklad se jmenem "VSE ML". Jde pouzit Anaconda Navigator nebo prikazova radka.
+
+3. Nainstalovat Visual Studio Code:
+  - nainstalovat python extension
+  - ctrl+shift+p - zkontrolovat, ze je Python environment vybrano v "Python: Select Interpeter"
+
+4. Doinstalovat knihovny:
+Update package installeru
+  * python -m pip install --upgrade pip
+Nainstalova TensorFlow
+  * pip install tensorflow
+Nainstalovat Pandas z Condy
+  * conda install -c anaconda pandas
+Nainstalovat Matplotlib z Condy
+  * conda install -c conda-forge matplotlib
+
+
+5. Vyzkouset, ze vse funguje pustenim skriptu:
+
+import tensorflow as tf
+import numpy as np
+import pandas as pd
+import matplotlib as plt
+print(tf.__version__)
+
+6. Nainstalovat Jupyter Notebook z navigatoru
+- zmena default dir:
+  * jupyter notebook --generate-config
+  * otevrit vygenerovany file (Writing default config to: C:\Users\User\.jupyter\jupyter_notebook_config.py)
+  * najit # c.NotebookApp.notebook_dir = ''
+  * odkomentovat a napsat cestu: 'C:/..', pozor, je treba pouzivat obracena lomitka! Pro pouziti windows lomitek by bylo treba je escapnout
+  
+7. Vytvorit/pouzit Google ucet k rozjeti Google Colab
+  1. Google Drive
+  2. Pripojit aplikace (pres Pridat)
+  3. Colaboratory
+  4. Pridat soubor Google Colaboratory
