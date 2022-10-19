@@ -1,0 +1,5 @@
+conda clean --all -y
+
+python -m pip install --upgrade pip
+
+conda env create -v -n VSE-TEST -f environment.yml
